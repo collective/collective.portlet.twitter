@@ -20,3 +20,20 @@ Alternatively, if you are using zc.buildout and the plone.recipe.zope2instance r
     $ ./bin/buildout
 
 You can skip the ZCML slug if you are going to explicitly include the package from another package's configure.zcml file.
+
+
+HowTo
+_____
+
+Create twitter widget:
+
+.. image:: https://raw.github.com/collective/collective.twitter.widget.portlets/master/docs/_img/Screen%20Shot%202012-11-09%20at%209.54.19%20AM.png
+
+Configure widget:
+.. image:: https://raw.github.com/collective/collective.twitter.widget.portlets/master/docs/_img/Screen%20Shot%202012-11-09%20at%209.54.58%20AM.png
+
+Saved:
+.. image:: https://raw.github.com/collective/collective.twitter.widget.portlets/master/docs/_img/Screen%20Shot%202012-11-09%20at%209.55.14%20AM.png
+
+Get widget id:
+.. image:: https://raw.github.com/collective/collective.twitter.widget.portlets/master/docs/_img/Screen%20Shot%202012-11-09%20at%209.55.14%20AM-Get_id.png
