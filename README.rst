@@ -53,6 +53,10 @@ Get widget id:
 
 .. image:: https://raw.github.com/collective/collective.twitter.widget.portlets/master/docs/_img/Screen%20Shot%202012-11-09%20at%209.55.14%20AM-Get_id.png
 
+Add widget id in field **Data Widget ID**:
+
+.. image:: https://raw.github.com/collective/collective.twitter.widget.portlets/master/docs/_img/Screen%20Shot%202012-11-09%20at%209.53.19%20AM.png
+
 
 Credits
 -------
