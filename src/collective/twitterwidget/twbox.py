@@ -10,8 +10,8 @@ from zope.formlib import form
 
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
-from collective.twitter.widget.portlets import _
-from collective.twitter.widget.portlets.config import PROJECTNAME
+from collective.twitterwidget import _
+from collective.twitterwidget.config import PROJECTNAME
 
 import logging
 

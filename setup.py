@@ -10,7 +10,7 @@ long_description = open("README.rst").read() + "\n" + \
                    open(os.path.join("docs", "CREDITS.rst")).read() + "\n" + \
                    open(os.path.join("docs", "HISTORY.rst")).read()
 
-setup(name='collective.twitter.widget.portlets',
+setup(name='collective.twitterwidget',
       version=version,
       description=description,
       long_description=long_description,
@@ -32,12 +32,11 @@ setup(name='collective.twitter.widget.portlets',
       keywords='plone portlet twitter widget',
       author='Thiago Avelino',
       author_email='thiagoavelinoster@gmail.com',
-      url='https://github.com/collective/collective.twitter.widget.portlets',
+      url='https://github.com/collective/collective.twitterwidget',
       license='GPLv2',
       packages=find_packages('src'),
       package_dir={'': 'src'},
-      namespace_packages=['collective', 'collective.twitter',
-          'collective.twitter.widget'],
+      namespace_packages=['collective', 'collective.twitterwidget'],
       include_package_data=True,
       zip_safe=False,
       install_requires=[
