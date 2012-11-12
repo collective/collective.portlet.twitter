@@ -67,5 +67,5 @@ ___________
 Mostly Harmless
 ---------------
 
-.. image:: https://secure.travis-ci.org/avelino/collective.twitter.widget.portlets.png
-    :target: http://travis-ci.org/avelino/collective.twitter.widget.portlets
+.. image:: https://secure.travis-ci.org/collective/collective.twitter.widget.portlets.png
+    :target: http://travis-ci.org/collective/collective.twitter.widget.portlets
