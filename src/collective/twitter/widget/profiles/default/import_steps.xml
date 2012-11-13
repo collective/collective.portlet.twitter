@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<import-steps>
+  <import-step id="collective.twitter.widget.install"
+               version="20121113-01"
+               handler="collective.twitter.widget.setuphandlers.import_various"
+               title="collective.twitter.widget: miscellaneous import steps for install package">
+    Various import steps that are not handled by GS import/export
+    handlers.
+  </import-step>
+</import-steps>
+

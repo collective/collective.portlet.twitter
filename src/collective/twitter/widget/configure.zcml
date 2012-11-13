@@ -32,7 +32,7 @@
 
      <plone:portlet
          name="collective.twitter.widget.TwitterBoxPortlet"
-         interface=".new.WidgetNewPortlet"
+         interface=".new.IWidgetNewPortlet"
          assignment=".new.Assignment"
          edit_permission="cmf.ManagePortal"
          renderer=".new.Renderer"
