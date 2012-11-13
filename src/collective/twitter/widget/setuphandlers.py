@@ -2,7 +2,7 @@
 
 from Products.CMFCore.utils import getToolByName
 
-from collective.twitterwidget.config import PROJECTNAME
+from collective.twitter.widget.config import PROJECTNAME
 
 INITIAL_PROFILE_ID = 'profile-%s:initial' % PROJECTNAME
 

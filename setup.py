@@ -3,14 +3,14 @@
 import os
 from setuptools import setup, find_packages
 
-version = '0.1'
+version = '0.2.dev.0'
 description = u"Twitter Widget Portlet - https://twitter.com/settings/widgets"
 long_description = open("README.rst").read() + "\n" + \
                    open(os.path.join("docs", "INSTALL.rst")).read() + "\n" + \
                    open(os.path.join("docs", "CREDITS.rst")).read() + "\n" + \
                    open(os.path.join("docs", "HISTORY.rst")).read()
 
-setup(name='collective.twitterwidget',
+setup(name='collective.twitter.widget',
       version=version,
       description=description,
       long_description=long_description,
@@ -32,11 +32,12 @@ setup(name='collective.twitterwidget',
       keywords='plone portlet twitter widget',
       author='Thiago Avelino',
       author_email='thiagoavelinoster@gmail.com',
-      url='https://github.com/collective/collective.twitterwidget',
+      url='https://github.com/collective/collective.twitter.widget',
       license='GPLv2',
       packages=find_packages('src'),
       package_dir={'': 'src'},
-      namespace_packages=['collective', 'collective.twitterwidget'],
+      namespace_packages=['collective', 'collective.twitter',
+          'collective.twitter.widget'],
       include_package_data=True,
       zip_safe=False,
       install_requires=[

@@ -12,18 +12,18 @@ class Fixture(PloneSandboxLayer):
 
     def setUpZope(self, app, configurationContext):
         # Load ZCML
-        import collective.twitterwidget
-        self.loadZCML(package=collective.twitterwidget)
+        import collective.twitter.widget
+        self.loadZCML(package=collective.twitter.widget)
 
     def setUpPloneSite(self, portal):
         # Install into Plone site using portal_setup
-        self.applyProfile(portal, 'collective.twitterwidget:default')
+        self.applyProfile(portal, 'collective.twitter.widget:default')
 
 
 FIXTURE = Fixture()
 INTEGRATION_TESTING = IntegrationTesting(
     bases=(FIXTURE,),
-    name='collective.twitterwidget:Integration')
+    name='collective.twitter.widget:Integration')
 FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(FIXTURE,),
-    name='collective.twitterwidget:Functional')
+    name='collective.twitter.widget:Functional')
