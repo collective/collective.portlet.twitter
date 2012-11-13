@@ -53,4 +53,3 @@ setup(name='collective.twitter.widget',
       target = plone
       """,
       )
-
