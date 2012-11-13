@@ -31,14 +31,6 @@
        provides="Products.GenericSetup.interfaces.EXTENSION"
        />
 
-    <genericsetup:registerProfile
-        name="uninstall"
-        title="collective.twitter.widget uninstall"
-        directory="profiles/uninstall"
-        description="Uninstall profile for the collective.twitter.widget.wall package."
-        provides="Products.GenericSetup.interfaces.EXTENSION"
-        />
-
      <plone:portlet
          name="collective.twitter.widget.TwitterBoxPortlet"
          interface=".twbox.ITwitterBoxPortlet"
