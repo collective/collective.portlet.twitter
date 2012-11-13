@@ -1,7 +1,7 @@
 # convenience makefile to boostrap & run buildout
 # use `make options=-v` to run buildout with extra options
 
-pep8_ignores = E501
+pep8_ignores = E501,W391
 options = -N -q -t 3
 
 prerequisites:
