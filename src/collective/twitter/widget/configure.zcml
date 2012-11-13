@@ -9,7 +9,6 @@
 
     <five:registerPackage package="." />
     <includeDependencies package="." />
-    <i18n:registerTranslations directory="locales" />
 
     <include package="five.grok" />
 
@@ -33,12 +32,12 @@
 
      <plone:portlet
          name="collective.twitter.widget.TwitterBoxPortlet"
-         interface=".twbox.ITwitterBoxPortlet"
-         assignment=".twbox.Assignment"
+         interface=".new.WidgetNewPortlet"
+         assignment=".new.Assignment"
          edit_permission="cmf.ManagePortal"
-         renderer=".twbox.Renderer"
-         addview=".twbox.AddForm"
-         editview=".twbox.EditForm"
+         renderer=".new.Renderer"
+         addview=".new.AddForm"
+         editview=".new.EditForm"
          />
 
 </configure>

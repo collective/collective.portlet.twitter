@@ -12,7 +12,7 @@ from plone.app.testing import TEST_USER_ID
 from plone.app.testing import setRoles
 
 
-class TwitterBoxTest(unittest.TestCase):
+class WidgetNewTest(unittest.TestCase):
 
     layer = INTEGRATION_TESTING
 
@@ -24,13 +24,13 @@ class TwitterBoxTest(unittest.TestCase):
     def test_portlet_addview_registered(self):
         portlet = getUtility(
             IPortletType,
-            name='collective.twitter.widget.TwitterBoxPortlet')
+            name='collective.twitter.widget.WidgetNewPortlet')
 
         self.assertEqual(portlet.addview,
-                         'collective.twitter.widget.TwitterBoxPortlet')
+                         'collective.twitter.widget.WidgetNewPortlet')
 
     def test_portlet_title_registered(self):
         portlet = getUtility(IPortletType,
-                             name='collective.twitter.widget.TwitterBoxPortlet')
+                             name='collective.twitter.widget.WidgetNewPortlet')
 
-        self.assertEqual(u"Twitter Widget", portlet.title)
+        self.assertEqual(u"Twitter Widget (new)", portlet.title)
