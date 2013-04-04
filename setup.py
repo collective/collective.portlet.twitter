@@ -41,13 +41,24 @@ setup(name='collective.twitter.widget',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-        'setuptools',
-        'collective.prettydate>=1.1',
-        'five.grok>=1.2',
-        ],
+          'five.grok>=1.2',
+          'plone.app.portlets',
+          'plone.portlets',
+          'Products.CMFCore',
+          'Products.GenericSetup',
+          'setuptools',
+          'zope.formlib',
+          'zope.i18nmessageid',
+          'zope.interface',
+          'zope.schema',
+      ],
       extras_require={
-        'test': ['plone.app.testing'],
-        },
+          'test': [
+              'plone.app.testing',
+              'unittest2',
+              'zope.component',
+          ],
+      },
       entry_points="""
       [z3c.autoinclude.plugin]
       target = plone
