@@ -41,7 +41,6 @@ setup(name='collective.twitter.widget',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          'five.grok>=1.2',
           'plone.app.portlets',
           'plone.portlets',
           'Products.CMFCore',
