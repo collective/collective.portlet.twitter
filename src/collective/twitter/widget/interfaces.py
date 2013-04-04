@@ -7,4 +7,3 @@ class ITwitterWidgetLayer(Interface):
     """
     Marker Default browser layer this product.
     """
-
