@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<layers>
-    <layer name="collective.twitter.widget"
-        interface="collective.twitter.widget.interfaces.ITwitterWidgetLayer"
-    />
-</layers>

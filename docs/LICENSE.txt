@@ -1,4 +1,4 @@
-  collective.twitter.widget is copyright 2012-2013, Thiago Avelino.
+  collective.portlet.twitter is copyright 2012-2013, Thiago Avelino.
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by

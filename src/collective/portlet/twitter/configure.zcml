@@ -4,29 +4,29 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:i18n="http://namespaces.zope.org/i18n"
-    i18n_domain="collective.twitter.widget">
+    i18n_domain="collective.portlet.twitter">
 
     <five:registerPackage package="." />
     <includeDependencies package="." />
 
     <genericsetup:registerProfile
        name="default"
-       title="collective.twitter.widget"
+       title="collective.portlet.twitter"
        directory="profiles/default"
-       description="Installs the collective.twitter.widget package."
+       description="Installs the collective.portlet.twitter package."
        provides="Products.GenericSetup.interfaces.EXTENSION"
        />
 
     <genericsetup:registerProfile
        name="initial"
-       title="collective.twitter.widget initial"
+       title="collective.portlet.twitter initial"
        directory="profiles/initial"
-       description="Installs the collective.twitter.widget package (initial setup)."
+       description="Installs the collective.portlet.twitter package (initial setup)."
        provides="Products.GenericSetup.interfaces.EXTENSION"
        />
 
      <plone:portlet
-         name="collective.twitter.widget.TwitterBoxPortlet"
+         name="collective.portlet.twitter.TwitterBoxPortlet"
          interface=".new.IWidgetNewPortlet"
          assignment=".new.Assignment"
          edit_permission="cmf.ManagePortal"

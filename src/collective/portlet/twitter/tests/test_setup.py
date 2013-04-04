@@ -5,8 +5,8 @@ import unittest2 as unittest
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import setRoles
 
-from collective.twitter.widget.config import PROJECTNAME
-from collective.twitter.widget.testing import INTEGRATION_TESTING
+from collective.portlet.twitter.config import PROJECTNAME
+from collective.portlet.twitter.testing import INTEGRATION_TESTING
 
 
 class InstallTest(unittest.TestCase):

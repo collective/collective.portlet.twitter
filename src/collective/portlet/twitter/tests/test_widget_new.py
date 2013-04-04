@@ -2,7 +2,7 @@
 
 import unittest2 as unittest
 
-from collective.twitter.widget.testing import INTEGRATION_TESTING
+from collective.portlet.twitter.testing import INTEGRATION_TESTING
 
 from plone.portlets.interfaces import IPortletType
 
@@ -24,13 +24,13 @@ class WidgetNewTest(unittest.TestCase):
     def test_portlet_addview_registered(self):
         portlet = getUtility(
             IPortletType,
-            name='collective.twitter.widget.WidgetNewPortlet')
+            name='collective.portlet.twitter.WidgetNewPortlet')
 
         self.assertEqual(portlet.addview,
-                         'collective.twitter.widget.WidgetNewPortlet')
+                         'collective.portlet.twitter.WidgetNewPortlet')
 
     def test_portlet_title_registered(self):
         portlet = getUtility(IPortletType,
-                             name='collective.twitter.widget.WidgetNewPortlet')
+                             name='collective.portlet.twitter.WidgetNewPortlet')
 
         self.assertEqual(u"Twitter Widget (new)", portlet.title)

@@ -1,4 +1,4 @@
-<dl id="TwitterWidgetPortlet" class="portlet TwitterWidgetPortlet" i18n:domain="collective.twitter.widget">
+<dl id="TwitterWidgetPortlet" class="portlet TwitterWidgetPortlet" i18n:domain="collective.portlet.twitter">
 
     <dt class="portletHeader">
       <span class="portletTopLeft"></span>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<import-steps>
+  <import-step id="collective.portlet.twitter.install"
+               version="20121113-01"
+               handler="collective.portlet.twitter.setuphandlers.import_various"
+               title="collective.portlet.twitter: miscellaneous import steps for install package">
+    Various import steps that are not handled by GS import/export
+    handlers.
+  </import-step>
+</import-steps>
+

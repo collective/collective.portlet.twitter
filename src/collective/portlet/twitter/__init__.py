@@ -2,4 +2,4 @@
 
 from zope.i18nmessageid import MessageFactory as BaseMessageFactory
 
-_ = BaseMessageFactory('collective.twiiter.widget')
+_ = BaseMessageFactory('collective.portlet.twitter')
