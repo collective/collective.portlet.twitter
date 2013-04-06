@@ -161,7 +161,6 @@ class Renderer(base.Renderer):
         attrs = self.get_attributes()
         for attr in attrs.keys():
             attrs_str += "%s='%s' " % (attr, attrs[attr])
-        print attrs_str
         return "<a class='twitter-timeline'  %s >%s</a>" % (attrs_str,
                                                             self.getText())
 
