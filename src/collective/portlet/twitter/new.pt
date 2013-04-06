@@ -7,7 +7,7 @@
     </dt>
 
     <dd class="portletItem">
-      <a class="twitter-timeline" tal:attributes="data-widget-id view/getDataId; href view/getUrl" tal:content="view/getText"></a>
+      <a class="twitter-timeline" tal:attributes="data-widget-id view/getDataId; href view/getUrl" tal:replace="structure view/get_html_tag"></a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     </dd>
 

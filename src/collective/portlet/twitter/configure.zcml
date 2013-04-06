@@ -29,7 +29,6 @@
          name="collective.portlet.twitter.TwitterBoxPortlet"
          interface=".new.IWidgetNewPortlet"
          assignment=".new.Assignment"
-         edit_permission="cmf.ManagePortal"
          renderer=".new.Renderer"
          addview=".new.AddForm"
          editview=".new.EditForm"

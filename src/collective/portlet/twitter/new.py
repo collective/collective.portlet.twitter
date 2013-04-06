@@ -34,6 +34,42 @@ class IWidgetNewPortlet(IPortletDataProvider):
     twitter = schema.TextLine(title=_(u"Twitter Account"),
                               description=_(u"@twitter"))
 
+    theme = schema.TextLine(title=_(u"Theme"),
+                            description=_(u"Theme client side configuration"),
+                            required=False)
+
+    link_color = schema.TextLine(title=_(u"Link Color"),
+                                 description=_(u"Link Color client side configuration"),
+                                 required=False)
+
+    width = schema.TextLine(title=_(u"Width"),
+                            description=_(u"Width client side configuration"),
+                            required=False)
+
+    height = schema.TextLine(title=_(u"Height"),
+                             description=_(u"Height client side configuration"),
+                             required=False)
+
+    chrome = schema.TextLine(title=_(u"Chrome"),
+                             description=_(u"Chrome client side configuration"),
+                             required=False)
+
+    border_color = schema.TextLine(title=_(u"Border color"),
+                                   description=_(u"Border color client side configuration"),
+                                   required=False)
+
+    language = schema.TextLine(title=_(u"Language"),
+                               description=_(u"Language client side configuration"),
+                               required=False)
+
+    related = schema.TextLine(title=_(u"Web Intent Related Users"),
+                              description=_(u"Web Intent Related Users client side configuration"),
+                              required=False)
+
+    aria = schema.TextLine(title=_(u"ARIA politeness"),
+                           description=_(u"ARIA politeness client side configuration"),
+                           required=False)
+
 
 class Assignment(base.Assignment):
     """Portlet assignment.
@@ -46,9 +82,20 @@ class Assignment(base.Assignment):
     data_id = u""
     twitter = u""
 
-    def __init__(self, data_id=u"", twitter=u""):
+    def __init__(self, theme=None, link_color=None, width=None, height=None,
+                 chrome=None, border_color=None, language=None, related=None,
+                 aria=None, data_id=u"", twitter=u""):
         self.data_id = data_id
         self.twitter = twitter
+        self.theme = theme
+        self.link_color = link_color
+        self.width = width
+        self.height = height
+        self.chrome = chrome
+        self.border_color = border_color
+        self.language = language
+        self.related = related
+        self.aria = aria
 
     @property
     def title(self):
@@ -83,6 +130,40 @@ class Renderer(base.Renderer):
         """ Returns the text for themplate pertlet
         """
         return "Tweets by %s" % self.data.twitter
+
+    def get_attributes(self):
+        attr = {'data-widget-id': self.getDataId(),
+                'href': self.getUrl()}
+
+        if self.data.theme:
+            attr['data-theme'] = self.data.theme
+        if self.data.link_color:
+            attr['data-link-color'] = self.data.link_color
+        if self.data.width:
+            attr['width'] = self.data.width
+        if self.data.height:
+            attr['height'] = self.data.height
+        if self.data.chrome:
+            attr['data-chrome'] = self.data.chrome
+        if self.data.border_color:
+            attr['data-border-color'] = self.data.border_color
+        if self.data.language:
+            attr['data-language'] = self.data.language
+        if self.data.chrome:
+            attr['data-related'] = self.data.related
+        if self.data.aria:
+            attr['data-aria-polite'] = self.data.aria
+
+        return attr
+
+    def get_html_tag(self):
+        attrs_str = ""
+        attrs = self.get_attributes()
+        for attr in attrs.keys():
+            attrs_str += "%s='%s' " % (attr, attrs[attr])
+        print attrs_str
+        return "<a class='twitter-timeline'  %s >%s</a>" % (attrs_str,
+                                                            self.getText())
 
 
 class AddForm(base.AddForm):

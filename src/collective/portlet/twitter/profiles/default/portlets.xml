@@ -3,7 +3,7 @@
    i18n:domain="plone">
 
  <portlet title="Twitter Widget (new)"
-    addview="collective.portlet.twitter.WidgetNewPortlet"
+    addview="collective.portlet.twitter.TwitterBoxPortlet"
     description="A portlet to show a widget Twitter"
     i18n:attributes="title; description">
   <for interface="plone.app.portlets.interfaces.IColumn" />
