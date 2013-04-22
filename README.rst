@@ -1,41 +1,16 @@
+**********************
 Twitter Widget Portlet
-======================
+**********************
+
+.. contents:: Table of Contents
+
+Life, the Universe, and Everything
+----------------------------------
 
 https://twitter.com/settings/widgets
 
-
-Screenshot
-----------
-
-.. image:: https://raw.github.com/collective/collective.portlet.twitter/master/docs/_img/Screen%20Shot%202012-11-09%20at%209.52.39%20AM.png
-
-
-Install
--------
-
-* When you're reading this you have probably already run ``easy_install collective.portlet.twitter``. Find out how to install setuptools (and EasyInstall) here: http://peak.telecommunity.com/DevCenter/EasyInstall
-* Create a file called ``collective.portlet.twitter-configure.zcml`` in the ``/path/to/instance/etc/package-includes`` directory.  The file should only contain this
-
-
-    <include package="collective.portlet.twitter" />
-
-
-Alternatively, if you are using zc.buildout and the plone.recipe.zope2instance recipe to manage your project, you can do this:
-
-* Add ``collective.portlet.twitter`` to the list of eggs to install, e.g.:
-
-    [buildout]
-    eggs = collective.portlet.twitter
-
-* Re-run buildout, e.g. with:
-
-    $ ./bin/buildout
-
-You can skip the ZCML slug if you are going to explicitly include the package from another package's configure.zcml file.
-
-
-HowTo
-_____
+Don't Panic
+-----------
 
 Create twitter widget:
 
@@ -58,14 +33,9 @@ Add widget id in field **Data Widget ID**:
 .. image:: https://raw.github.com/collective/collective.portlet.twitter/master/docs/_img/Screen%20Shot%202012-11-09%20at%209.53.19%20AM.png
 
 
-Credits
--------
+That's it!
 
-Development
-___________
-
-* Main developper: `Thiago Avelino <https://github.com/avelino>`_
-* Sponsor: `tv1.com <http://www.grupotv1.com.br/pt-br/tv1-com/>`_
+.. image:: https://raw.github.com/collective/collective.portlet.twitter/master/docs/_img/Screen%20Shot%202012-11-09%20at%209.52.39%20AM.png
 
 
 Mostly Harmless
@@ -73,3 +43,7 @@ Mostly Harmless
 
 .. image:: https://secure.travis-ci.org/collective/collective.portlet.twitter.png
     :target: http://travis-ci.org/collective/collective.portlet.twitter
+
+Got an idea? Found a bug? Let us know by `opening a support ticket`_.
+
+.. _`opening a support ticket`: https://github.com/collective/collective.portlet.twitter/issues

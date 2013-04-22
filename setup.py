@@ -1,14 +1,18 @@
 # -*- coding:utf-8 -*-
 
+from setuptools import find_packages
+from setuptools import setup
+
 import os
-from setuptools import setup, find_packages
 
 version = '0.2.dev.0'
 description = u"Twitter Widget Portlet - https://twitter.com/settings/widgets"
-long_description = open("README.rst").read() + "\n" + \
-                   open(os.path.join("docs", "INSTALL.rst")).read() + "\n" + \
-                   open(os.path.join("docs", "CREDITS.rst")).read() + "\n" + \
-                   open(os.path.join("docs", "HISTORY.rst")).read()
+long_description = (
+    open("README.rst").read() + "\n" +
+    open(os.path.join("docs", "INSTALL.rst")).read() + "\n" +
+    open(os.path.join("docs", "CREDITS.rst")).read() + "\n" +
+    open(os.path.join("docs", "HISTORY.rst")).read()
+)
 
 setup(name='collective.portlet.twitter',
       version=version,

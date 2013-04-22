@@ -1,42 +1,22 @@
-Install
--------
+Installation
+------------
 
-* When you're reading this you have probably already run ``easy_install collective.portlet.twitter.portlets``. Find out how to install setuptools (and EasyInstall) here: http://peak.telecommunity.com/DevCenter/EasyInstall
-* Create a file called ``collective.portlet.twitter.portlets-configure.zcml`` in the ``/path/to/instance/etc/package-includes`` directory.  The file should only contain this
+To enable this package in a buildout-based installation:
 
-
-    <include package="collective.portlet.twitter.portlets" />
-
-
-Alternatively, if you are using zc.buildout and the plone.recipe.zope2instance recipe to manage your project, you can do this:
-
-* Add ``collective.portlet.twitter.portlets`` to the list of eggs to install, e.g.:
+1. Edit your buildout.cfg and add add the following to it::
 
     [buildout]
-    eggs = collective.portlet.twitter.portlets
+    ...
+    eggs =
+        collective.portlet.twitter
 
-* Re-run buildout, e.g. with:
+After updating the configuration you need to run ''bin/buildout'', which will
+take care of updating your system.
 
-    $ ./bin/buildout
+Go to the 'Site Setup' page in a Plone site and click on the 'Add-ons' link.
 
-You can skip the ZCML slug if you are going to explicitly include the package from another package's configure.zcml file.
+Check the box next to ``collective.portlet.twitter`` and click the 'Activate'
+button.
 
-
-HowTo
-_____
-
-Create twitter widget:
-
-.. image:: https://raw.github.com/collective/collective.portlet.twitter.portlets/master/docs/_img/Screen%20Shot%202012-11-09%20at%209.54.19%20AM.png
-
-Configure widget:
-
-.. image:: https://raw.github.com/collective/collective.portlet.twitter.portlets/master/docs/_img/Screen%20Shot%202012-11-09%20at%209.54.58%20AM.png
-
-Saved:
-
-.. image:: https://raw.github.com/collective/collective.portlet.twitter.portlets/master/docs/_img/Screen%20Shot%202012-11-09%20at%209.55.14%20AM.png
-
-Get widget id:
-
-.. image:: https://raw.github.com/collective/collective.portlet.twitter.portlets/master/docs/_img/Screen%20Shot%202012-11-09%20at%209.55.14%20AM-Get_id.png
+Note: You may have to empty your browser cache and save your resource
+registries in order to see the effects of the package installation.
