@@ -24,13 +24,13 @@ class WidgetNewTest(unittest.TestCase):
     def test_portlet_addview_registered(self):
         portlet = getUtility(
             IPortletType,
-            name='collective.portlet.twitter.WidgetNewPortlet')
+            name='collective.portlet.twitter.TwitterBoxPortlet')
 
         self.assertEqual(portlet.addview,
-                         'collective.portlet.twitter.WidgetNewPortlet')
+                         'collective.portlet.twitter.TwitterBoxPortlet')
 
     def test_portlet_title_registered(self):
         portlet = getUtility(IPortletType,
-                             name='collective.portlet.twitter.WidgetNewPortlet')
+                             name='collective.portlet.twitter.TwitterBoxPortlet')
 
         self.assertEqual(u"Twitter Widget (new)", portlet.title)
