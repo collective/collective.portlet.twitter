@@ -5,7 +5,7 @@ from setuptools import setup
 
 import os
 
-version = '0.2.dev.0'
+version = '1.0b1'
 description = u"Twitter Widget Portlet - https://twitter.com/settings/widgets"
 long_description = (
     open("README.rst").read() + "\n" +
