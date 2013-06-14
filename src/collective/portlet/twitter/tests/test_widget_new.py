@@ -2,11 +2,12 @@
 
 import unittest2 as unittest
 
+from collective.portlet.twitter.new import Assignment, Renderer
 from collective.portlet.twitter.testing import INTEGRATION_TESTING
 
-from plone.portlets.interfaces import IPortletType
+from plone.portlets.interfaces import IPortletType, IPortletManager, IPortletRenderer
 
-from zope.component import getUtility
+from zope.component import getUtility, getMultiAdapter
 
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import setRoles
@@ -20,6 +21,25 @@ class WidgetNewTest(unittest.TestCase):
         self.portal = self.layer['portal']
         self.request = self.layer['request']
         setRoles(self.portal, TEST_USER_ID, ['Manager'])
+
+    def test_portlet_render(self):
+        context = self.portal
+        request = self.portal.REQUEST
+        view = context.restrictedTraverse('@@plone')
+        manager = getUtility(IPortletManager, name='plone.rightcolumn', context=context)
+        assignment = Assignment(data_id=u"0", twitter=u"plone")
+
+        renderer = getMultiAdapter((context, request, view, manager, assignment), IPortletRenderer)
+
+        self.failUnless(isinstance(renderer, Renderer))
+        self.failUnless(renderer.available,
+                        "Renderer should be available by default.")
+
+        self.assertEqual(renderer.get_html_tag(),
+                         "<a class='twitter-timeline'  href='http://twitter.com/plone' data-widget-id='0'  >Tweets by plone</a>")
+        html = renderer.render()
+        self.assertIn('<script>', html)
+        self.assertIn(renderer.get_html_tag(), html)
 
     def test_portlet_addview_registered(self):
         portlet = getUtility(
