@@ -4,6 +4,8 @@ There's a frood who really knows where his towel is
 1.0b2 (unreleased)
 ^^^^^^^^^^^^^^^^^^
 
+- Fix specifying the ``data-related`` attribute without a value.
+  [davidjb]
 - Add ability to customise portlet header text and ability to show just the
   Twitter widget (omit border).
   [davidjb]

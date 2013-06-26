@@ -170,7 +170,7 @@ class Renderer(base.Renderer):
             attr['data-language'] = self.data.language
         if self.data.tweet_limit:
             attr['data-tweet-limit'] = self.data.tweet_limit
-        if self.data.chrome:
+        if self.data.related:
             attr['data-related'] = self.data.related
         if self.data.aria:
             attr['data-aria-polite'] = self.data.aria

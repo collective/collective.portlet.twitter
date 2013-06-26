@@ -53,6 +53,14 @@ class WidgetNewTest(unittest.TestCase):
         html = renderer.render()
         self.assertNotIn('<dl', html)
 
+    def test_portlet_data_attributes(self):
+        assignment = Assignment(data_id=u"0",
+                                twitter=u"plone",
+                                chrome="noborders")
+        renderer = self._get_portlet_renderer(assignment)
+        attributes = renderer.get_attributes()
+        self.assertEqual(attributes.keys(),
+                         ['data-chrome', 'href', 'data-widget-id'])
 
     def test_portlet_addview_registered(self):
         portlet = getUtility(
