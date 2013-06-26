@@ -4,6 +4,8 @@ There's a frood who really knows where his towel is
 1.0b2 (unreleased)
 ^^^^^^^^^^^^^^^^^^
 
+- Add titles and descriptions to the portlet add and edit pages.
+  [davidjb]
 - Remove tal:attributes specification from Twitter link in portlet page 
   template. This is already handled by the HTML tag creation code, and lead
   to rendering failure in some cases (see 
