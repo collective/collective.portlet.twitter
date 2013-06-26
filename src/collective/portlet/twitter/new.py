@@ -116,18 +116,17 @@ class Renderer(base.Renderer):
     render = ViewPageTemplateFile('new.pt')
 
     def getDataId(self):
-        """
-        Returns the data id for the portlet
+        """ Returns the data id for the portlet.
         """
         return self.data.data_id
 
     def getUrl(self):
-        """ Returns the url for themplate portlet
+        """ Returns the Twitter url for the given user.
         """
         return "http://twitter.com/%s" % self.data.twitter
 
     def getText(self):
-        """ Returns the text for themplate pertlet
+        """ Returns the text for the portlet.
         """
         return "Tweets by %s" % self.data.twitter
 
