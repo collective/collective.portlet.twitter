@@ -14,6 +14,7 @@ from collective.portlet.twitter import _
 from collective.portlet.twitter.config import PROJECTNAME
 
 import logging
+import re
 
 logger = logging.getLogger(PROJECTNAME)
 
@@ -27,47 +28,59 @@ class IWidgetNewPortlet(IPortletDataProvider):
     """
 
     data_id = schema.TextLine(title=_(u'Data Widget ID'),
-                              description=_(u"Create new Widget in \
-                                      https://twitter.com/settings/widgets \
-                                      and input ID"))
+                              description=_(u"The numerical identifier for the Twitter widget to be displayed.  For example: 123456789098765432."))
 
     twitter = schema.TextLine(title=_(u"Twitter Account"),
-                              description=_(u"@twitter"))
+                              description=_(u"Enter the Twitter account username that the portlet should link to. For example: @twitter."))
+
+    header = schema.TextLine(title=_(u"Portlet header"),
+                             description=_(u"Title of the rendered portlet."),
+                             constraint=re.compile("[^\s]").match,
+                             required=False)
+
+    omit_border = schema.Bool(title=_(u"Omit portlet border"),
+                              description=_(u"Tick this box if you want to render the portlet without the standard header, border or footer."),
+                              required=True,
+                              default=False)
 
     theme = schema.TextLine(title=_(u"Theme"),
-                            description=_(u"Theme client side configuration"),
+                            description=_(u"Client side configuration. Sets the theme of the embedded widget. For example: dark."),
                             required=False)
 
     link_color = schema.TextLine(title=_(u"Link Color"),
-                                 description=_(u"Link Color client side configuration"),
+                                 description=_(u"Client side configuration. Controls the color of links in the widget. For example: #cc0000."),
                                  required=False)
 
     width = schema.TextLine(title=_(u"Width"),
-                            description=_(u"Width client side configuration"),
+                            description=_(u"Client side configuration. Sets the width of the widget by way of the standard HTML width attribute. For example: 200px, 100%, or 10em."),
                             required=False)
 
     height = schema.TextLine(title=_(u"Height"),
-                             description=_(u"Height client side configuration"),
+                             description=_(u"Client side configuration. Sets theheight of the widget by way of the standard HTML height attribute.  For example: 200px, 50% or 10em."),
                              required=False)
 
     chrome = schema.TextLine(title=_(u"Chrome"),
-                             description=_(u"Chrome client side configuration"),
+                             description=_(u"Client side configuration. Enter space-separated options to control widget layout. For example: noheader nofooter noborders noscollbar transparent."),
                              required=False)
 
-    border_color = schema.TextLine(title=_(u"Border color"),
-                                   description=_(u"Border color client side configuration"),
+    border_color = schema.TextLine(title=_(u"Border Color"),
+                                   description=_(u"Client side configuration. Controls the border color of the widget. For example: #cc0000."),
                                    required=False)
 
     language = schema.TextLine(title=_(u"Language"),
-                               description=_(u"Language client side configuration"),
+                               description=_(u"Client side configuration. Controls the HTML lang attribute for the widget. For example: fr."),
                                required=False)
 
+    tweet_limit = schema.Int(title=_(u"Tweet Limit"),
+                             description=_(u"Client side configuration. Controls the number of tweets shown in the timeline. The widget will be resized to show all tweets without scrolling. For example: 10."),
+                             required=False)
+
     related = schema.TextLine(title=_(u"Web Intent Related Users"),
-                              description=_(u"Web Intent Related Users client side configuration"),
+                              description=_(u"Client side configuration. Comma-separated list of usernames as suggested follows after tweet interaction. For example: plone,worldploneday."),
                               required=False)
 
-    aria = schema.TextLine(title=_(u"ARIA politeness"),
-                           description=_(u"ARIA politeness client side configuration"),
+    aria = schema.TextLine(title=_(u"ARIA Politeness"),
+                           description=_(u"Client side configuration. Control how the widget may allow assistive technology to ineract with dynamic content. For example: assertive."),
                            required=False)
 
 
@@ -81,10 +94,14 @@ class Assignment(base.Assignment):
     implements(IWidgetNewPortlet)
     data_id = u""
     twitter = u""
+    tweet_limit = None
+    header = u"Twitter"
+    omit_border = False
 
     def __init__(self, theme=None, link_color=None, width=None, height=None,
-                 chrome=None, border_color=None, language=None, related=None,
-                 aria=None, data_id=u"", twitter=u""):
+                 chrome=None, border_color=None, language=None,
+                 tweet_limit=None, related=None, aria=None, data_id=u"",
+                 twitter=u"", header=u"Twitter", omit_border=False):
         self.data_id = data_id
         self.twitter = twitter
         self.theme = theme
@@ -94,8 +111,11 @@ class Assignment(base.Assignment):
         self.chrome = chrome
         self.border_color = border_color
         self.language = language
+        self.tweet_limit = tweet_limit
         self.related = related
         self.aria = aria
+        self.header = header
+        self.omit_border = omit_border
 
     @property
     def title(self):
@@ -148,6 +168,8 @@ class Renderer(base.Renderer):
             attr['data-border-color'] = self.data.border_color
         if self.data.language:
             attr['data-language'] = self.data.language
+        if self.data.tweet_limit:
+            attr['data-tweet-limit'] = self.data.tweet_limit
         if self.data.chrome:
             attr['data-related'] = self.data.related
         if self.data.aria:

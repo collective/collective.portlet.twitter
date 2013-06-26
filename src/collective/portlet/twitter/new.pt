@@ -1,17 +1,25 @@
-<dl id="TwitterWidgetPortlet" class="portlet TwitterWidgetPortlet" i18n:domain="collective.portlet.twitter">
+<dl id="TwitterWidgetPortlet"
+    class="portlet TwitterWidgetPortlet"
+    i18n:domain="collective.portlet.twitter"
+    tal:define="omit_border view/data/omit_border"
+    tal:omit-tag="omit_border">
 
-    <dt class="portletHeader">
+    <dt class="portletHeader"
+        tal:condition="not:omit_border">
       <span class="portletTopLeft"></span>
-        <a class="tile" href="#TwitterWidgetPortlet">Twitter</a>
+        <a class="tile" href="#TwitterWidgetPortlet"
+           tal:condition="view/data/header"
+           tal:attributes="href view/getUrl"
+           tal:content="view/data/header">Twitter</a>
       <span class="portletTopRight"></span>
     </dt>
 
-    <dd class="portletItem">
+    <dd class="portletItem" tal:omit-tag="omit_border">
       <a class="twitter-timeline" tal:replace="structure view/get_html_tag"></a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     </dd>
 
-    <dd class="portletFooter">
+    <dd class="portletFooter" tal:condition="not:omit_border">
       <span class="portletBottomLeft"></span>
       <span class="portletBottomRight"></span>
     </dd>

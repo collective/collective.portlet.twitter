@@ -22,14 +22,17 @@ class WidgetNewTest(unittest.TestCase):
         self.request = self.layer['request']
         setRoles(self.portal, TEST_USER_ID, ['Manager'])
 
-    def test_portlet_render(self):
+    def _get_portlet_renderer(self, assignment):
         context = self.portal
         request = self.portal.REQUEST
         view = context.restrictedTraverse('@@plone')
         manager = getUtility(IPortletManager, name='plone.rightcolumn', context=context)
-        assignment = Assignment(data_id=u"0", twitter=u"plone")
-
         renderer = getMultiAdapter((context, request, view, manager, assignment), IPortletRenderer)
+        return renderer
+
+    def test_portlet_render(self):
+        assignment = Assignment(data_id=u"0", twitter=u"plone")
+        renderer = self._get_portlet_renderer(assignment)
 
         self.failUnless(isinstance(renderer, Renderer))
         self.failUnless(renderer.available,
@@ -38,8 +41,18 @@ class WidgetNewTest(unittest.TestCase):
         self.assertEqual(renderer.get_html_tag(),
                          "<a class='twitter-timeline'  href='http://twitter.com/plone' data-widget-id='0'  >Tweets by plone</a>")
         html = renderer.render()
+        self.assertIn('<dl', html)
         self.assertIn('<script>', html)
         self.assertIn(renderer.get_html_tag(), html)
+
+    def test_portlet_render_options(self):
+        assignment = Assignment(data_id=u"0",
+                                twitter=u"plone",
+                                omit_border=True)
+        renderer = self._get_portlet_renderer(assignment)
+        html = renderer.render()
+        self.assertNotIn('<dl', html)
+
 
     def test_portlet_addview_registered(self):
         portlet = getUtility(

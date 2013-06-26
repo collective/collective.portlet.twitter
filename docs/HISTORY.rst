@@ -4,6 +4,17 @@ There's a frood who really knows where his towel is
 1.0b2 (unreleased)
 ^^^^^^^^^^^^^^^^^^
 
+- Add ability to customise portlet header text and ability to show just the
+  Twitter widget (omit border).
+  [davidjb]
+- Link portlet title to the user's Twitter timeline.
+  [davidjb]
+- Update descriptions for Twitter client configuration to be end-user
+  readable and add examples.
+  [davidjb]
+- Add ``tweet-limit`` client-side configuration option to control the number
+  of tweets displayed.
+  [davidjb]
 - Add titles and descriptions to the portlet add and edit pages.
   [davidjb]
 - Remove tal:attributes specification from Twitter link in portlet page 
