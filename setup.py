@@ -3,15 +3,12 @@
 from setuptools import find_packages
 from setuptools import setup
 
-import os
-
 version = '1.0b3.dev0'
 description = u"Twitter Widget Portlet - https://twitter.com/settings/widgets"
 long_description = (
-    open("README.rst").read() + "\n" +
-    open(os.path.join("docs", "INSTALL.rst")).read() + "\n" +
-    open(os.path.join("docs", "CREDITS.rst")).read() + "\n" +
-    open(os.path.join("docs", "HISTORY.rst")).read()
+    open('README.rst').read() + '\n' +
+    open('CONTRIBUTORS.rst').read() + '\n' +
+    open('CHANGES.rst').read()
 )
 
 setup(name='collective.portlet.twitter',
@@ -19,21 +16,21 @@ setup(name='collective.portlet.twitter',
       description=description,
       long_description=long_description,
       classifiers=[
-        "Development Status :: 4 - Beta",
-        "Environment :: Web Environment",
-        "Framework :: Plone",
-        "Framework :: Plone :: 4.1",
-        "Framework :: Plone :: 4.2",
-        "Framework :: Plone :: 4.3",
-        "Intended Audience :: System Administrators",
-        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
-        "Operating System :: OS Independent",
-        "Programming Language :: JavaScript",
-        "Programming Language :: Python",
-        "Programming Language :: Python :: 2.6",
-        "Programming Language :: Python :: 2.7",
-        "Topic :: Software Development :: Libraries :: Python Modules",
-        ],
+          "Development Status :: 4 - Beta",
+          "Environment :: Web Environment",
+          "Framework :: Plone",
+          "Framework :: Plone :: 4.1",
+          "Framework :: Plone :: 4.2",
+          "Framework :: Plone :: 4.3",
+          "Intended Audience :: System Administrators",
+          "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+          "Operating System :: OS Independent",
+          "Programming Language :: JavaScript",
+          "Programming Language :: Python",
+          "Programming Language :: Python :: 2.6",
+          "Programming Language :: Python :: 2.7",
+          "Topic :: Software Development :: Libraries :: Python Modules",
+      ],
       keywords='plone portlet twitter widget',
       author='Thiago Avelino',
       author_email='thiagoavelinoster@gmail.com',
