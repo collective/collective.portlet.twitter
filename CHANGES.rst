@@ -1,7 +1,7 @@
 There's a frood who really knows where his towel is
 ---------------------------------------------------
 
-1.0b3 (unreleased)
+1.0b3 (2013-10-09)
 ^^^^^^^^^^^^^^^^^^
 
 - Fix potential XSS (arbitrary injection) issue by escaping and quoting all
