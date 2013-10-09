@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from cgi import escape
 from zope.interface import implements
 
 from plone.portlets.interfaces import IPortletDataProvider
@@ -181,8 +182,8 @@ class Renderer(base.Renderer):
         attrs_str = ""
         attrs = self.get_attributes()
         for attr in attrs.keys():
-            attrs_str += "%s='%s' " % (attr, attrs[attr])
-        return "<a class='twitter-timeline'  %s >%s</a>" % (attrs_str,
+            attrs_str += '%s="%s" ' % (attr, escape(attrs[attr], quote=True))
+        return '<a class="twitter-timeline"  %s >%s</a>' % (attrs_str,
                                                             self.getText())
 
 
