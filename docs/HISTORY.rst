@@ -4,7 +4,9 @@ There's a frood who really knows where his towel is
 1.0b3 (unreleased)
 ^^^^^^^^^^^^^^^^^^
 
-- Nothing changed yet.
+- Fix potential XSS (arbitrary injection) issue by escaping and quoting all
+  attributes being set on the rendered portlet.
+  [davidjb]
 
 
 1.0b2 (2013-06-28)
