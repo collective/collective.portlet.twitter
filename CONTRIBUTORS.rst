@@ -7,6 +7,7 @@ contribution of the following people:
 * `Thiago Avelino`_ (original developer)
 * Gonzalo Almeida
 * Héctor Velarde
+* David Beitey
 
 You can find an updated list of package contributors on `GitHub`_.
 
