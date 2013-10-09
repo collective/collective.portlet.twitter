@@ -39,11 +39,18 @@ class WidgetNewTest(unittest.TestCase):
                         "Renderer should be available by default.")
 
         self.assertEqual(renderer.get_html_tag(),
-                         "<a class='twitter-timeline'  href='http://twitter.com/plone' data-widget-id='0'  >Tweets by plone</a>")
+                         '<a class="twitter-timeline"  href="http://twitter.com/plone" data-widget-id="0"  >Tweets by plone</a>')
         html = renderer.render()
         self.assertIn('<dl', html)
         self.assertIn('<script>', html)
         self.assertIn(renderer.get_html_tag(), html)
+
+    def test_portlet_render_attibutes(self):
+        assignment = Assignment(data_id=u'"><script></script>', twitter=u"plone")
+        renderer = self._get_portlet_renderer(assignment)
+        html = renderer.get_html_tag()
+        self.assertIn('data-widget-id="&quot;&gt;&lt;script&gt;&lt;/script&gt;"', html)
+        self.assertNotIn('data-widget-id=""><script></script>"', html)
 
     def test_portlet_render_options(self):
         assignment = Assignment(data_id=u"0",
