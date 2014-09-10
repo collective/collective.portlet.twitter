@@ -1,0 +1,177 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"POT-Creation-Date: 2014-09-10 16:02+0000\n"
+"PO-Revision-Date: 2014-09-10 14:14-0300\n"
+"Last-Translator: Héctor Velarde <hector.velarde@gmail.com>\n"
+"Language-Team: Collective\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+"Language: es\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: collective/portlet/twitter/new.py:83
+msgid "ARIA Politeness"
+msgstr "Cortesía WAI-ARIA"
+
+#: collective/portlet/twitter/new.py:200
+msgid "Add Twitter Widget Portlet"
+msgstr "Agregar portlet de widget de Twitter"
+
+#: collective/portlet/twitter/new.py:67
+msgid "Border Color"
+msgstr "Color de borde"
+
+#: collective/portlet/twitter/new.py:63
+msgid "Chrome"
+msgstr ""
+
+#: collective/portlet/twitter/new.py:80
+msgid ""
+"Client side configuration. Comma-separated list of usernames as suggested "
+"follows after tweet interaction. For example: plone,worldploneday."
+msgstr ""
+
+#: collective/portlet/twitter/new.py:84
+msgid ""
+"Client side configuration. Control how the widget may allow assistive "
+"technology to ineract with dynamic content. For example: assertive."
+msgstr ""
+
+#: collective/portlet/twitter/new.py:72
+msgid ""
+"Client side configuration. Controls the HTML lang attribute for the widget. "
+"For example: fr."
+msgstr ""
+
+#: collective/portlet/twitter/new.py:68
+msgid ""
+"Client side configuration. Controls the border color of the widget. For "
+"example: #cc0000."
+msgstr ""
+
+#: collective/portlet/twitter/new.py:52
+msgid ""
+"Client side configuration. Controls the color of links in the widget. For "
+"example: #cc0000."
+msgstr ""
+
+#: collective/portlet/twitter/new.py:76
+msgid ""
+"Client side configuration. Controls the number of tweets shown in the "
+"timeline. The widget will be resized to show all tweets without scrolling. "
+"For example: 10."
+msgstr ""
+
+#: collective/portlet/twitter/new.py:64
+msgid ""
+"Client side configuration. Enter space-separated options to control widget "
+"layout. For example: noheader nofooter noborders noscollbar transparent."
+msgstr ""
+
+#: collective/portlet/twitter/new.py:48
+msgid ""
+"Client side configuration. Sets the theme of the embedded widget. For "
+"example: dark."
+msgstr ""
+
+#: collective/portlet/twitter/new.py:56
+msgid ""
+"Client side configuration. Sets the width of the widget by way of the "
+"standard HTML width attribute. For example: 200px, 100%, or 10em."
+msgstr ""
+
+#: collective/portlet/twitter/new.py:60
+msgid ""
+"Client side configuration. Sets theheight of the widget by way of the "
+"standard HTML height attribute.  For example: 200px, 50% or 10em."
+msgstr ""
+
+#: collective/portlet/twitter/new.py:31
+msgid "Data Widget ID"
+msgstr ""
+
+#: collective/portlet/twitter/new.py:214
+msgid "Edit Twitter Widget Portlet"
+msgstr "Editar portlet de widget de Twitter"
+
+#: collective/portlet/twitter/new.py:35
+msgid ""
+"Enter the Twitter account username that the portlet should link to. For "
+"example: @twitter."
+msgstr ""
+"Introduzca el nombre de usuario de Twitter vinculado al portlet. Por "
+"ejemplo: @twitter."
+
+#: collective/portlet/twitter/new.py:59
+msgid "Height"
+msgstr "Altura"
+
+#: collective/portlet/twitter/new.py:71
+msgid "Language"
+msgstr "Idioma"
+
+#: collective/portlet/twitter/new.py:51
+msgid "Link Color"
+msgstr "Color del vínculo"
+
+#: collective/portlet/twitter/new.py:42
+msgid "Omit portlet border"
+msgstr "Omitir el borde del portlet"
+
+#: collective/portlet/twitter/new.py:37
+msgid "Portlet header"
+msgstr "Encabezado"
+
+#: collective/portlet/twitter/new.py:32
+msgid ""
+"The numerical identifier for the Twitter widget to be displayed.  For "
+"example: 123456789098765432."
+msgstr ""
+"Identificador numérico del widget de Twitter que se mostrará. Por ejemplo: "
+"123456789098765432."
+
+#: collective/portlet/twitter/new.py:47
+msgid "Theme"
+msgstr "Tema"
+
+#: collective/portlet/twitter/new.py:201
+msgid ""
+"This portlet displays an Embedded Timeline Twitter widget. Create a widget "
+"using the Twitter widgets page (https://twitter.com/settings/widgets) first."
+msgstr ""
+
+#: collective/portlet/twitter/new.py:43
+msgid ""
+"Tick this box if you want to render the portlet without the standard header, "
+"border or footer."
+msgstr ""
+"Seleccione esta opción si desea que el portlet se muestre sin el encabezado, "
+"borde y pie de página estándar."
+
+#: collective/portlet/twitter/new.py:38
+msgid "Title of the rendered portlet."
+msgstr "Título del portlet"
+
+#: collective/portlet/twitter/new.py:75
+msgid "Tweet Limit"
+msgstr "Límite de Twitter"
+
+#: collective/portlet/twitter/new.py:34
+msgid "Twitter Account"
+msgstr "Cuenta de Twitter"
+
+#: collective/portlet/twitter/new.py:79
+msgid "Web Intent Related Users"
+msgstr ""
+
+#: collective/portlet/twitter/new.py:55
+msgid "Width"
+msgstr "Ancho"

@@ -1,8 +1,13 @@
-There's a frood who really knows where his towel is
----------------------------------------------------
+Changelog
+---------
+
+There's a frood who really knows where his towel is.
 
 1.0b4 (unreleased)
 ^^^^^^^^^^^^^^^^^^
+
+- Add Brazilian Portuguese and Spanish translations.
+  [hvelarde]
 
 - Fix issue with escaping non-basestring values [enkidulan]
 
