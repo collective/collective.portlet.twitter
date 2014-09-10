@@ -17,10 +17,16 @@ Mostly Harmless
 ---------------
 
 .. image:: https://secure.travis-ci.org/collective/collective.portlet.twitter.png?branch=master
+    :alt: Travis CI badge
     :target: http://travis-ci.org/collective/collective.portlet.twitter
 
 .. image:: https://coveralls.io/repos/collective/collective.portlet.twitter/badge.png?branch=master
+    :alt: Coveralls badge
     :target: https://coveralls.io/r/collective/collective.portlet.twitter
+
+.. image:: https://pypip.in/d/collective.portlet.twitter/badge.png
+    :alt: Downloads
+    :target: https://pypi.python.org/pypi/collective.portlet.twitter
 
 Got an idea? Found a bug? Let us know by `opening a support ticket`_.
 
