@@ -183,7 +183,7 @@ class Renderer(base.Renderer):
         attrs = self.get_attributes()
         for attr in attrs.keys():
             val = escape(attrs[attr], quote=True) \
-                  if isinstance(attrs[attr], basestring) else attrs[attr]
+                if isinstance(attrs[attr], basestring) else attrs[attr]
             attrs_str += '%s="%s" ' % (attr, val)
         return '<a class="twitter-timeline"  %s >%s</a>' % (attrs_str,
                                                             self.getText())
@@ -213,4 +213,3 @@ class EditForm(base.EditForm):
     form_fields = form.Fields(IWidgetNewPortlet)
     label = _(u"Edit Twitter Widget Portlet")
     description = _(u"This portlet displays an Embedded Timeline Twitter widget. Create a widget using the Twitter widgets page (https://twitter.com/settings/widgets) first.")
-
