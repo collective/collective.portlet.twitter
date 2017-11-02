@@ -6,7 +6,8 @@ There's a frood who really knows where his towel is.
 1.0rc2 (unreleased)
 ^^^^^^^^^^^^^^^^^^^
 
-- Nothing changed yet.
+- Make portlet compatible with Plone5
+  [frapell]
 
 
 1.0rc1 (2014-09-10)

@@ -197,6 +197,7 @@ class AddForm(base.AddForm):
     constructs the assignment that is being added.
     """
     form_fields = form.Fields(IWidgetNewPortlet)
+    schema = IWidgetNewPortlet
     label = _(u"Add Twitter Widget Portlet")
     description = _(u"This portlet displays an Embedded Timeline Twitter widget. Create a widget using the Twitter widgets page (https://twitter.com/settings/widgets) first.")
 
@@ -211,5 +212,6 @@ class EditForm(base.EditForm):
     zope.formlib which fields to display.
     """
     form_fields = form.Fields(IWidgetNewPortlet)
+    schema = IWidgetNewPortlet
     label = _(u"Edit Twitter Widget Portlet")
     description = _(u"This portlet displays an Embedded Timeline Twitter widget. Create a widget using the Twitter widgets page (https://twitter.com/settings/widgets) first.")
